@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 # Load a model
-model = YOLO("runs/detect/train40/weights/best.pt")  # pretrained YOLOv8n model
+model = YOLO("best.pt")  # pretrained YOLOv8n model
 
 # Run batched inference on a list of images
 results = model(["datasets/Card-Detection-8/test/images/021407554_jpg.rf.d68568480c4c6d78df79181201aebfe0.jpg"])  # return a list of Results objects

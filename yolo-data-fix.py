@@ -5,7 +5,7 @@ rf = Roboflow(api_key="WoJcpr1rwlUPyPJivcm2")
 
 # grab our data
 project = rf.workspace("cadyzedevelopmenthub").project("card-detection-zk7wu")
-version = project.version(8)
+version = project.version(9)
 dataset = version.download("yolov8")
 
 # for each image, load YOLO annotations and require mask format for each
