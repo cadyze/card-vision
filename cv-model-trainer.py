@@ -1,9 +1,8 @@
 from ultralytics import YOLO
 
-def train():
-
+def train(model_path):
     # Load a model
-    model = YOLO("runs/detect/card-vision/weights/best.pt")  # load a pretrained model (recommended for training)
+    model = YOLO(model_path)  # load a pretrained model (recommended for training)
 
     # Use the model
     model.train(data="datasets/Card-Detection-12/data.yaml", name="card-vision", exist_ok=True, epochs=10, 
@@ -12,8 +11,8 @@ def train():
     # path = model.export(format="onnx")  # export the model to ONNX format
 
 
-def validate():
-    model = YOLO("runs/detect/train44/weights/best.pt")
+def validate(model_path):
+    model = YOLO(model_path)
     metrics = model.val()
     metrics.box.map  # map50-95
     metrics.box.map50  # map50
@@ -21,4 +20,5 @@ def validate():
     metrics.box.maps 
 
 if __name__ == '__main__':
-    train()
+    model_path = "card-vision-model-output/weights/best.pt"
+    train(model_path)
