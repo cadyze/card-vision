@@ -1,8 +1,8 @@
 task: detect
 mode: train
-model: runs/detect/card-vision/weights/best.pt
+model: card-vision-model-output/weights/best.pt
 data: datasets/Card-Detection-12/data.yaml
-epochs: 10
+epochs: 30
 time: null
 patience: 100
 batch: 16

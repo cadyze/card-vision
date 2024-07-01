@@ -5,7 +5,7 @@ def train(model_path):
     model = YOLO(model_path)  # load a pretrained model (recommended for training)
 
     # Use the model
-    model.train(data="datasets/Card-Detection-12/data.yaml", name="card-vision", exist_ok=True, epochs=10, 
+    model.train(data="datasets/Card-Detection-12/data.yaml", name="card-vision", exist_ok=True, epochs=30, 
                 imgsz=640, cache="ram", batch=16, device=0, amp=False, workers=4)  # train the model
     # metrics = model.val()  # evaluate model performance on the validation set
     # path = model.export(format="onnx")  # export the model to ONNX format
