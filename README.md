@@ -1,3 +1,4 @@
+<img src="/repo-images/header-vid.gif" width="100%"/>
 # Card-Vision
 This is a computer vision project using Python, OpenCV, YOLOv8, and PyTorch that accurately detects poker cards by their value and suit. Utilizing OpenCV for image processing and YOLOv8 for object detection, the system identifies and classifies cards in real-time. The project involved using Roboflow for dataset annotation and management, training a YOLOv8 model with PyTorch, and optimizing the model for deployment on various platforms.
 
